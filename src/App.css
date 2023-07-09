@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page-wrapper {
   display: flex;
   flex-direction: column;
+  height: 100vh;
   align-items: center;
+}
+
+.ttt-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 18px;
+  margin: 18px;
+  min-width: 300px;
+  box-shadow: 0px 0px 25px 0px #cccccc;
+  border-radius: 4px;
+}
+
+.ttt-status {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  padding: 14px;
+  background-color: #d1e6fc;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  color: #003670;
+}
+
+.ttt-grid {
+  display: grid;
+  margin-top: 20px;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  border: 1px #007bff solid;
+  min-height: 300px;
+}
+
+.ttt-button {
+  height: 100%;
+  width: 100%;
+  font-size: 3rem;
+  background: none;
+  color: #007bff;
+  border: 1px #007bff solid;
+}
+
+.ttt-button:hover:enabled {
+  box-shadow: 0px 0px 10px 0px #007bff;
+}
+
+.ttt-button:disabled {
+  background-color: #6e757c37;
+}
+
+.ttt-button-group {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ttt-action-button {
+  border: none;
   color: white;
+  background-color: #6e757c;
+  margin: 0 5px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 10px 15px;
 }
 
-.App-link {
-  color: #61dafb;
+.ttt-action-button:hover {
+  background-color: #3a3f43;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.ttt-infobar {
+  display: flex;
+  flex-flow: row wrap;
+  border-radius: 4px;
+  background-color: #f3f3f3;
+  width: 260px;
+  padding: 8px 20px;
+  margin: 20px;
+  justify-content: center;
+  color: #282a2e;
+}
+
+.ttt-infobar p {
+  margin: 8px 5px;
+}
+
+.ttt-badge {
+  color: white;
+  background-color: #6e757c;
+  border-radius: 3px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 1px 4px;
 }
